@@ -1,6 +1,8 @@
+import './App.css'
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import './App.css'
+import Footer from './components/Footer';
+
 
 function App() {
   const recipeBookArray = 
@@ -130,6 +132,7 @@ function App() {
     <>
      <Navbar />
      <Sidebar />
+     <Footer/>
 
     </>
   )
