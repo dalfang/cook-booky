@@ -1,8 +1,13 @@
 import React from 'react'
+import RecipeItem from './RecipeItem'
 
-const RecipeList = () => {
+const RecipeList = ({recipes, onDelete}) => {
   return (
-    <div>RecipeList</div>
+    <div> 
+      {recipes.map(recipe => (
+        <RecipeItem key ={recipe.id} recipe={recipe} onClick={() => onDelete(recipe.id)} />
+      ))}
+    </div>
   )
 }
 

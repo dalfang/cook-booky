@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import recipeBookData from './assets/recipe-book.json'
 import './App.css'
+import RecipeList from './components/RecipeList';
 
 
 function App() {
@@ -14,14 +15,15 @@ function App() {
   const handleDelete = (id) => {
     setRecipeData(recipeData.filter(recipe => recipe.id !== id));
   };
-  
+
   return (
     <>
      <Navbar />
      <Sidebar />
      <div className="content">
-        <h1>Recipe Book</h1>
+        
         <RecipeList recipes={recipeData} onDelete={handleDelete} />
+      
       </div>
      <Footer/>
 
