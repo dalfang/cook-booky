@@ -1,14 +1,14 @@
-import React from 'react'
-import RecipeItem from './RecipeItem'
+import React from 'react';
+import RecipeItem from './RecipeItem';
 
-const RecipeList = ({recipes, onDelete}) => {
+const RecipeList = ({ recipes, handleDelete }) => {
   return (
-    <div> 
+    <ul className="recipe-list">
       {recipes.map(recipe => (
-        <RecipeItem key ={recipe.id} recipe={recipe} onClick={() => onDelete(recipe.id)} />
+        <RecipeItem key={recipe.id} recipe={recipe} handleDelete={handleDelete} />
       ))}
-    </div>
-  )
-}
+    </ul>
+  );
+};
 
-export default RecipeList
+export default RecipeList;

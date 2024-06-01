@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutPage = () => {
   return (
-    <div>
+    <div className='about-us-page'>
         <h1>About us</h1>
         <p>This is an app that allowing the user to create and manage their favorite recipes.</p>
         <h2>Team Members</h2>
@@ -18,4 +18,4 @@ const AboutPage = () => {
   )
 }
 
-export default AboutPage
+export default AboutPage;

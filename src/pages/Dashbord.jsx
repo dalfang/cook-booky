@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
-import RecipeList from '../components/RecipeList'
-import recipeBookData from './assets/recipe-book.json'
+import React from 'react';
+import RecipeList from '../components/RecipeList';
+import { Link } from 'react-router-dom';
 
-const Dashbord = () => {
-    const [recipes, setRecipes] = useState(recipeBookData);
-
+const Dashboard = ({ recipes, handleDelete }) => {
   return (
-    <div>
-        <RecipeList/>
+    <div className='dashbord'>
+      <Link to="/create-recipe">
+        <button>Create New Recipe</button>
+      </Link>
+      <RecipeList recipes={recipes} handleDelete={handleDelete} />
+      
     </div>
-
-  )
+  );
 }
 
-export default Dashbord
+export default Dashboard;
