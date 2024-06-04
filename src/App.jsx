@@ -11,6 +11,7 @@ import ItemDetails from './pages/ItemDetails';
 import AboutPage from './pages/AboutPage';
 import NotFound from './pages/NotFound';
 import CreateRecipe from './components/CreateRecipe';
+import UpdateRecipe from './components/UpdateRecipe';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<Dashbord recipes={recipeData} handleDelete={handleDelete} />} />
           <Route path="/details/:id" element={<ItemDetails recipes={recipeData} />} />
           <Route path="/create-recipe" element={<CreateRecipe recipes={recipeData} setRecipes={setRecipeData} />} />
+          <Route path="/update-recipe/:id" element={<UpdateRecipe recipes={recipeData} setRecipes={setRecipeData}/>}/>
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFound />} />      
       </Routes>

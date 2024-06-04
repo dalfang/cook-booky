@@ -52,6 +52,13 @@
 }
 
 
+
+/* .recipe-detail img {
+  width: 260px;
+  padding-left: 450px;
+  
+} */
+
 /*FOOTER*/
 
 .footer {
@@ -104,6 +111,15 @@
   padding-left: 7px;
 }
 
+/*Recipe List*/
+.recipe-detail {
+  width: 50px;
+  padding-left: 450px ;
+  text-align: center;
+  align-items: center;
+}
+
+
 /* CreateRecipe component */
 
 .create-recipe-form {
@@ -144,6 +160,48 @@
 }
 
 .create-recipe-form button:hover {
+  background-color: #2c4163; 
+}
+
+
+.update-recipe-form {
+  padding-top: 50px;
+  padding-left: 7px;
+  width: 100%; 
+  max-width: 500px; 
+  margin: auto; 
+}
+
+.update-recipe-form h3 {
+  text-align: center; 
+}
+
+.update-recipe-form label {
+  display: block; 
+  margin-bottom: 10px; 
+}
+
+.update-recipe-form input,
+.cupdate-recipe-form textarea {
+  width: 100%; 
+  padding: 10px; 
+  margin-bottom: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
+}
+
+.update-recipe-form button {
+  width: 100%; 
+  padding: 10px; 
+  background-color: #3e5886; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.update-recipe-form button:hover {
   background-color: #2c4163; 
 }
 

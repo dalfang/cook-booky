@@ -1,25 +1,35 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import RecipeItem from '../components/RecipeItem';
 
 const ItemDetails = ({ recipes }) => {
-    const { id } = useParams();
-    const recipeId = parseInt(id);
-    const recipe = recipes.find(recipe => recipe.id === recipeId);
+    const recipeParams = useParams(); //grab recipe id from url
+    //const recipeId = parseInt(id);
+    const foundRecipe = recipes.find((oneRecipe) => (oneRecipe.id == recipeParams.id));
 
     console.log("detail")
     
-    if (!recipe) {
+    if (!foundRecipe) {
       return <p>Recipe not found</p>;
+      
     }
     
     return (
-      <div>
+      <div className='recipe-detail'>
+        
+         
           <h1>Recipe's details</h1>
-          <h2>{recipe.name}</h2>
-          <img src={recipe.image} alt={recipe.name}/>
-          <p>Calories: {recipe.calories}</p>
-          <p>Serving: {recipe.servings}</p>
-          {recipe.calories > 300 ? <p>High Calorie</p> : <p>Low Calorie</p>}
+          <h2>{foundRecipe.name}</h2>
+          <img src={foundRecipe.image} alt={foundRecipe.name} style={{height: "100px"}}/>
+          <p>Calories: {foundRecipe.calories}</p>
+          <p>Serving: {foundRecipe.servings}</p>
+          {foundRecipe.calories > 300 ? <p>High Calorie</p> : <p>Low Calorie</p>}
+
+          <Link to={`/update-recipe/${foundRecipe.id}`}>
+          <button>Edit</button>
+          </Link>
+          
+
       </div>
     );
 }
