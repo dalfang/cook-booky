@@ -15,21 +15,22 @@ const ItemDetails = ({ recipes }) => {
     }
     
     return (
-      <div className='recipe-detail'>
-        
+
+      <div className="main-content">
+       <div className='recipe-detail'>
          
-          <h1>Recipe's details</h1>
-          <h2>{foundRecipe.name}</h2>
-          <img src={foundRecipe.image} alt={foundRecipe.name} style={{height: "100px"}}/>
-          <p>Calories: {foundRecipe.calories}</p>
-          <p>Serving: {foundRecipe.servings}</p>
-          {foundRecipe.calories > 300 ? <p>High Calorie</p> : <p>Low Calorie</p>}
-
-          <Link to={`/update-recipe/${foundRecipe.id}`}>
-          <button>Edit</button>
-          </Link>
+           <h1>Recipe's details</h1>
+           <h2>{foundRecipe.name}</h2>
+           <img src={foundRecipe.image} alt={foundRecipe.name} style={{height: "100px"}}/>
+           <p>Calories: {foundRecipe.calories}</p>
+           <p>Serving: {foundRecipe.servings}</p>
+           {foundRecipe.calories > 300 ? <p>High Calorie</p> : <p>Low Calorie</p>}
+ 
+           <Link to={`/update-recipe/${foundRecipe.id}`}>
+           <button>Edit</button>
+           </Link>
+           </div>
           
-
       </div>
     );
 }

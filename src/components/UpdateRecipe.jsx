@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 export const UpdateRecipe = ({recipes, setRecipes}) => {
+  
 
   console.log("update ??")
 
@@ -23,7 +24,7 @@ export const UpdateRecipe = ({recipes, setRecipes}) => {
 
   function handleUpdateRecipe(event) {
     event.preventDefault();
-    const updateRecipe = {name, calories, image, servings};
+    const updateRecipe = {name, calories, image, servings, id:foundRecipe.id};
     const updateArrayOfRecipes = recipes.map((oneRecipe) => {
       if (oneRecipe.id == updateRecipeParams.id) {
         return updateRecipe;
@@ -32,8 +33,9 @@ export const UpdateRecipe = ({recipes, setRecipes}) => {
       }
     })
 
+    console.log(updateArrayOfRecipes);
     setRecipes(updateArrayOfRecipes);
-    nav("/");
+    nav(`/details/${updateRecipeParams.id}`);
   }
 
   return (
@@ -63,7 +65,10 @@ export const UpdateRecipe = ({recipes, setRecipes}) => {
           <input
             type="number"
             value={servings}
-            onChange={(event) => setServings(event.target.value)}
+            onChange={(event) => {
+              const newServings = parseInt(event.target.value, 10);
+              setServings(isNaN(newServings) || newServings < 0 ? 0 : newServings);
+            }}
             placeholder="Servings"
           />
         </label>

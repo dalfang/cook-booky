@@ -51,7 +51,10 @@ const CreateRecipe = ({ recipes, setRecipes }) => {
           <input
             type="number"
             value={servings}
-            onChange={(event) => setServings(event.target.value)}
+            onChange={(event) => {
+              const newServings = parseInt(event.target.value, 10);
+              setServings(isNaN(newServings) || newServings < 0 ? 0 : newServings);
+            }}
             placeholder="Servings"
           />
         </label>

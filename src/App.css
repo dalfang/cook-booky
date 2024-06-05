@@ -1,3 +1,6 @@
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+}
 
 /*HEADER/NAV BAR*/
 
@@ -5,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 10%;
+  height: 5%;
   background-color: #3e5886;
   padding: 10px 50px;
   position: fixed;
@@ -19,7 +22,7 @@
 }
 .navbar-logo {
   height: 40px;
-  padding-left: 35%;
+  padding-left: 37%;
   justify-content: center;
   align-items: center;  
   
@@ -36,28 +39,87 @@
 /*SIDE BAR*/
 
 .sidebar {
-  left: 0;
+  left: 0; 
   width: 150px;
   height: 90%;
   background-color: #f4f4f4;
   position: fixed;
   padding-top: 150px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  
  }
 
+ .sidebar-list li {
+  padding: 5px 2px;
+  text-align: left;
+}
  
-.sidebar-list {
-  list-style-type: none;
-  
+ .sidebar-list li a {
+  color: #333;
+  display: block;
+}
+.sidebar-list li a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+/*ItemDetails*/
+
+.main-content {
+  margin-left: 40vh;
+  display: flex;
+  justify-content: center;
+  min-height: 90vh; /* Full height of the viewport */
+  background-color: #f4f4f4; /* Background color for contrast */
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.recipe-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 650px;
+  max-width: 800px; /* Adjust this value as necessary to fit your design */
+  margin: 50px auto; /* Centers the element horizontally and adds margin */
+  padding: 70px; /* Reduced padding */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Background color for better visibility */
+}
+
+.recipe-detail h2 {
+  margin-bottom: 20px;
+}
+
+.recipe-detail img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.recipe-detail p {
+  margin-bottom: 10px;
+  margin-left: 67px;
+}
+
+.recipe-detail button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #3e5886;
+  color: #fff;
+  border: none;
+  margin-top: 50px;
+}
+
+.recipe-detail button:hover {
+  background-color: #2c4163;
 }
 
 
-
-/* .recipe-detail img {
-  width: 260px;
-  padding-left: 450px;
-  
-} */
 
 /*FOOTER*/
 
@@ -79,52 +141,99 @@
 
 /*BODY*/
 .dashbord{
-  background-color: bisque;
+  background-color: white;
   padding-top: 50px;
   padding-left: 7px;
   border: #3e5886;
   width: 181vh;
+  /* position: fixed;
+  margin-left: 150px; */
 }
 
+body{
+  display: flex;
+}
 
 /*RECIPE ITEM*/
-.recipe-image-container{
+.recipe-card {
   display: flex;
   align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  margin-left: 150px;
-  padding: 30px;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 0px 250px 10px 150px ;
+  padding: 20px;
+  
 }
 
-.recipe-image{
-  width: 150px;
+.recipe-container-card {
   display: flex;
-  justify-content: center;
+  width: 100%;  
+  margin: 34px 19px 20px 30px;
+  align-items: center; /* Ensure the content is aligned in the middle vertically */
+  padding: 10px; /* Optional: Adds some space inside the container */
 }
 
+.recipe-image {
+  width: 150px; /* or any other appropriate size */
+  margin-right: 80px; /* Adds some space between the image and the text */
+}
+
+.recipe-link {
+  display: flex;
+  align-items: center; /* Aligns the link content vertically */
+  color: inherit; /* Keeps the text color consistent */
+  text-decoration: none; /* Removes underline from the link */
+}
+
+.recipe-card button {
+  padding: 4px;
+  margin: 40px;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 50px;
+  margin-right: 130px;
+  background-color: #3e5886;
+  color: #fff;
+}
+
+.recipe-card h3, p {
+  margin: 10px 70px 0 100px;
+  
+
+}
+
+
+.recipe-card button:hover {
+  background-color: #2c4163;}
+
+
+/*About us page*/
 .about-us-page{
   text-align: center;
   background-color: white;
-  width: 181vh;
+  width: 110vh;
   padding-top: 150px;
-  padding-left: 7px;
+  margin-left: 200px;
 }
 
 /*Recipe List*/
-.recipe-detail {
-  width: 50px;
-  padding-left: 450px ;
-  text-align: center;
-  align-items: center;
-}
+
+.recipe-list {
+  list-style-type: none; 
+
+} 
 
 
 /* CreateRecipe component */
 
 .create-recipe-form {
-  padding-top: 50px;
-  padding-left: 7px;
+  padding-top: 15vh;
+  padding-left: 60vh;
   width: 100%; 
   max-width: 500px; 
   margin: auto; 
@@ -165,11 +274,13 @@
 
 
 .update-recipe-form {
-  padding-top: 50px;
-  padding-left: 7px;
+
+  padding-top: 15vh;
+  padding-left: 60vh;
   width: 100%; 
   max-width: 500px; 
   margin: auto; 
+  text-align: center
 }
 
 .update-recipe-form h3 {
@@ -205,3 +316,35 @@
   background-color: #2c4163; 
 }
 
+.about-us-page {
+  padding-left: 9%;
+}
+
+/*Dashbord*/
+
+.recipe-header {
+  font-size: 15px;  
+  text-align: center;
+  position: fixed;  
+  width: 100%;
+  height: 2%;
+  right: 0px;
+  padding: 10px 1px;
+  margin-top: 20px;        
+  color: #333;             
+  background-color: #f0f0f0; 
+  border-radius: 8px;    
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+/* NotFound.css */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Use the full height of the viewport */
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #333;
+}
