@@ -84,5 +84,4 @@ export const UpdateRecipe = ({recipes, setRecipes}) => {
     </div>
   )
 }
- 
 export default UpdateRecipe

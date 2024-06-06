@@ -32,5 +32,4 @@ const ItemDetails = ({ recipes }) => {
       </div>
     );
 }
-
 export default ItemDetails;

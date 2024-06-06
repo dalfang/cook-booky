@@ -10,5 +10,4 @@ const RecipeList = ({ recipes, handleDelete }) => {
     </ul>
   );
 };
-
 export default RecipeList;

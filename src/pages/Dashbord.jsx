@@ -12,5 +12,4 @@ const Dashboard = ({ recipes, handleDelete }) => {
     </div>
   );
 }
-
 export default Dashboard;
