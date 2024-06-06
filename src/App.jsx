@@ -19,7 +19,6 @@ function App() {
   function handleDelete(id) {
     setRecipeData(recipeData.filter(recipe => recipe.id !== id));
   }
-
   return (
     <>
      <Navbar />

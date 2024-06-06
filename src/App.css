@@ -214,13 +214,11 @@ body{
 }
 
 /*Recipe List*/
-
 .recipe-list {
   list-style-type: none; 
 } 
 
 /* CreateRecipe component */
-
 .create-recipe-form {
   padding-top: 15vh;
   padding-left: 60vh;

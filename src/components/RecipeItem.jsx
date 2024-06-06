@@ -22,4 +22,5 @@ const RecipeItem = ({recipe, handleDelete}) => {
   </body> 
   );
 };
+
 export default RecipeItem;

@@ -6,7 +6,6 @@ const NotFound = () => {
     const goToHome = () => {
         navigate('/');
     };
-
     return (
         <div className="not-found-container">
             <h1>404 - Page Not Found 🚨🚨🚨 </h1>
