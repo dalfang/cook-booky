@@ -4,7 +4,7 @@ const AboutPage = () => {
   return (
     <div className='about-us-page'>
         <h1>About us</h1>
-        <p>This is an app that allowing the user to create and manage their favorite recipes.</p>
+        <p>Welcome to your ultimate digital cookbook. Our app allows you to create, store, and manage your favorite recipes all in one convenient place. Whether you're organizing meal plans, exploring new culinary ideas, or sharing your creations, we provide an intuitive platform to enhance your cooking experience.</p>
         <h2>Team Members 🧝‍♀️</h2>
         <div>
             <h4>Dalin Fangloy</h4>

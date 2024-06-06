@@ -3,9 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 export const UpdateRecipe = ({recipes, setRecipes}) => {
-  
-
-  console.log("update ??")
 
   const updateRecipeParams = useParams(); 
   const foundRecipe = recipes.find((oneRecipe) => { 

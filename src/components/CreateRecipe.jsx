@@ -8,8 +8,6 @@ const CreateRecipe = ({ recipes, setRecipes }) => {
   const [image, setImage] = useState('');
   const [servings, setServings] = useState(0);
 
-  //console.log('CreateRecipe'); 
-
   function handleAddRecipes(event) {
     event.preventDefault();
 
@@ -26,7 +24,7 @@ const CreateRecipe = ({ recipes, setRecipes }) => {
   }
   return (
     <div className='create-recipe-form'>
-      <h3>Create your recipe</h3>
+      <h3>Create your recipe! 🌟</h3>
       <form onSubmit={handleAddRecipes}>
         <label>
           Name:

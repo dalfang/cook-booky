@@ -5,10 +5,9 @@ import { Link } from 'react-router-dom';
 const RecipeItem = ({recipe, handleDelete}) => {
     const { id, name, calories, image, servings } = recipe;
     const isHighCalorie = calories > 300;
-  return (
-    
-    <body>
 
+  return (
+    <body>
     <div className='recipe-card'>
     <div className='recipe-container-card'>
        <Link to={`/details/${id}`} className='recipe-link'>
@@ -18,11 +17,9 @@ const RecipeItem = ({recipe, handleDelete}) => {
          {isHighCalorie ? <p>High Calorie</p> : <p>Low Calorie</p>}
        </Link>  
     </div> 
-  
     <button onClick={() => handleDelete(id)}>Delete</button>  
   </div>
   </body> 
   );
 };
-
 export default RecipeItem;

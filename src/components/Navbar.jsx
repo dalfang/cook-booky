@@ -3,7 +3,6 @@ import menu from '../assets/menu-icon.png'
 
 const Navbar = () => {
     return (
-      
         <header className="navbar">
             <div className="navbar-container">
                 <img src={menu} alt="App Menu" className='navbar-menu'/>
@@ -14,5 +13,4 @@ const Navbar = () => {
     
     );
 };
-
 export default Navbar

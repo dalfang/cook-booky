@@ -3,8 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import RecipeItem from '../components/RecipeItem';
 
 const ItemDetails = ({ recipes }) => {
-    const recipeParams = useParams(); //grab recipe id from url
-    //const recipeId = parseInt(id);
+    const recipeParams = useParams(); 
     const foundRecipe = recipes.find((oneRecipe) => (oneRecipe.id == recipeParams.id));
 
     console.log("detail")
@@ -13,7 +12,6 @@ const ItemDetails = ({ recipes }) => {
       return <p>Recipe not found</p>;
       
     }
-    
     return (
 
       <div className="main-content">

@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import recipeBookData from './assets/recipe-book.json'
-import RecipeList from './components/RecipeList';
 import Dashbord from './pages/Dashbord';
 import ItemDetails from './pages/ItemDetails';
 import AboutPage from './pages/AboutPage';
@@ -36,8 +35,6 @@ function App() {
       </Routes>
       </div>
      <Footer/>
-
-    
     </>
   )
 }
