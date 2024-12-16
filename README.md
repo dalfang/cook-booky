@@ -7,7 +7,6 @@ CookBooky is a cooking recipe management app that helps you organize, discover, 
 - **Recipe Management**: Add, edit, and delete recipes effortlessly.
 - **Search & Filter**: Quickly find recipes by ingredients, cuisine, or meal type.
 - **Favorites**: Save your go-to recipes for easy access.
-- **Meal Planning**: Plan your meals for the week and manage shopping lists.
 
 ## Built With
 
