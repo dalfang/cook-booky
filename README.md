@@ -1,8 +1,14 @@
-# React + Vite
+# CookBooky
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CookBooky is a cooking recipe management app that helps you organize, discover, and share your favorite recipes with ease. Built with React, it’s designed to streamline your cooking process and inspire creativity in the kitchen.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Recipe Management**: Add, edit, and delete recipes effortlessly.
+- **Search & Filter**: Quickly find recipes by ingredients, cuisine, or meal type.
+- **Favorites**: Save your go-to recipes for easy access.
+- **Meal Planning**: Plan your meals for the week and manage shopping lists.
+
+## Built With
+
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
